@@ -1,0 +1,136 @@
+body{
+    background: url(../imgs/8.jpg) no-repeat;
+    background-size: cover;
+}
+/* 设置横幅毕竟 */
+.banner{
+    background: url(../img/bg2.jpg) no-repeat;
+    width: 960px;
+    height: 280px;
+    margin: 115px;
+    box-shadow: 12px 15px 10px 0px black;
+    opacity: 0.8;
+    background-size: cover;
+    position: relative;
+}
+/* 设置横幅内部格式 */
+.banner ul li{
+    list-style: none;
+    display: inline-block;
+   position: absolute;
+    
+}
+/* 设置图片格式 */
+.banner ul li img{
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.m1{top: 80px; left: 54px;}
+.m2{top: 167px; left: 233px;}
+.m3{top: 7px; left: 370px;}
+.m4{top: 65px; left: 625px;}
+.m5{top: 168px; left: 840px;}
+
+/* 图片旋转 */
+@keyframes img_rotate {
+    from {
+        transform: rotate(0deg);
+    }to {
+        transform: rotate(0deg);
+    }
+  }
+@-moz-keyframes img_rotate { 
+    from { -moz-transform: rotate(0deg); } 
+    to { -moz-transform: rotate(360deg); } 
+} 
+@-webkit-keyframes img_rotate { 
+    from { -webkit-transform: rotate(0deg); } 
+    to { -webkit-transform: rotate(360deg); } 
+} 
+@keyframes img_rotate { 
+    from {transform:rotate(0deg);} 
+    to {transform:rotate(360deg);} 
+} 
+  /* 动画执行时间与次数 */
+.banner .rotate{
+    animation: img_rotate 5s infinite linear ;
+}
+/* 设置下面音乐播放格式 */
+.music{
+    width: 590px;
+    height: 130px;
+    background-color: rgb(77, 69, 79);
+    position: fixed;
+    left: 0px;
+    bottom: 155px;
+    opacity: 0.8;
+    box-shadow: 12px 15px 10px 0px black;
+    background-size: cover;
+   
+}
+.music .m_img{
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.music .m_text{
+    float: left;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 55px;
+    margin-left: 10px;
+}
+/* 使得所有的a 标签一起移动 */
+.music .m_btn{
+    float: left;
+    position: absolute;
+    left: 350px;
+}
+
+.music .m_btn a{
+    float: left;
+    width: 45px;
+    height: 45px;
+    background: url(../img/bg3.jpg);
+    margin-top: 50px;
+    margin-left: 15px;
+    border-radius: 50%;
+ 
+
+}
+.music .m_btn .m_prey{
+    background-position-x: -112px;
+    background-position-y: -35px; 
+}
+
+.music .m_btn .m_play{
+    background-position-x: -188px;
+    background-position-y: -35px; 
+}
+.music .m_btn .m_next{
+    background-position-x: -417px;
+    background-position-y: -35px;   
+}
+
+.music .m_close{
+    float: right;
+    background: url(../img/bg3.jpg);
+    height: 45px;
+    width: 45px;
+    margin-top: 50px;
+    background-position-x: -112px;
+    background-position-y: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.music .m_open{
+    background-position-x: -35px;
+    background-position-y: 80px;
+}
+/* 当点击播放按钮，利用js使其暂停 */
+.music .m_btn .m_pause{
+    background-position-x: -341px;
+    background-position-y: -35px; 
+}
